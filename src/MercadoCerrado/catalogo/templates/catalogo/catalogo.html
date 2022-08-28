@@ -1,18 +1,25 @@
 
 <h1>Productos</h1>
-
+<a href="{% url  'form-producto' %}"> Publica un nuevo producto</a>
 <table>
     <tr>
             <th>
                 Elementos
             </th>
     </tr>
-    {% for producto in productos %}
+    {% for producto in catalogo %}
         
     <tr>
         <td>
             {{producto.nombre}}
             {{producto.precio}}
+            {{producto.agregado}}
+            {% if producto.imagen %}
+                <img src="{{producto.imagen.url}}" width="200">   
+            {% endif %}
+        </td>
+        <td>
+            <a href=" {% url 'descripcion_producto' producto.id %} ">Ver mas</a>
         </td>
     </tr>
 
