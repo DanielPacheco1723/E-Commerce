@@ -1,0 +1,7 @@
+<a href="{% url 'catalogo' %}"> volver </a>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p> ¿Deseas dar de baja el producto: "{{producto}}" ?</p>
+    <input type="submit" value = "Eliminar">
+</form>
