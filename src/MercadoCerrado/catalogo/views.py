@@ -9,12 +9,12 @@ from .models import Producto
 class ListaProductos (ListView):
     model = Producto
     context_object_name = "catalogo"
-    template_name = "catalogo/catalogo.html"
+    template_name = "catalogo.html"
 
 class DetalleProductos (DetailView):
     model = Producto
     context_object_name = "producto"
-    template_name = "catalogo/productos.html"
+    template_name = "productos.html"
 
 class AgregarProducto (CreateView):
     model = Producto
